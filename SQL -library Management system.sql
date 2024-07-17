@@ -202,8 +202,8 @@ Select * from Books
    ( 
     Select
     Branch_no,
-	salary,
-	position,
+    salary,
+     position,
     Dense_rank()over( partition by Branch_no order by salary desc)
     As rank from Employee
    )
